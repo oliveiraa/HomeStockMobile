@@ -11,19 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308033045) do
+ActiveRecord::Schema.define(:version => 20120308040114) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "environments", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "product_types", :force => true do |t|
@@ -42,13 +35,19 @@ ActiveRecord::Schema.define(:version => 20120308033045) do
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "stocks", :force => true do |t|
-    t.integer  "product_id"
+  create_table "stock_movements", :force => true do |t|
+    t.integer  "stock_id"
+    t.string   "product_id"
     t.integer  "quantity"
-    t.integer  "environment_id"
-    t.datetime "movement_date"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "stocks", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
