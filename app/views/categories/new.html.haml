@@ -1,0 +1,6 @@
+= form_for(@category) do |f| 
+	%fieldset
+		%legend Nova Categoria
+		= f.label :name 
+		= f.text_field :name 
+	%input(type="submit" value="Enviar")
