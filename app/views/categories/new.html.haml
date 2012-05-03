@@ -1,5 +1,5 @@
 = form_for(@category) do |f| 
-	%fieldset
+	%fieldset(data-role="fieldcontain")
 		%legend Nova Categoria
 		= f.label :name 
 		= f.text_field :name 

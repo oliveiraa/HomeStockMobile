@@ -1,0 +1,4 @@
+-Problemas
+
+- Quando já existe uma categoria, ele trava
+- Após o cadastro com sucesso de uma categoria, ele não volta pra página principal

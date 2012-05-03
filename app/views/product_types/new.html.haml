@@ -1,0 +1,10 @@
+%h2 Tipo de Produto
+= form_for(@product_type) do |f| 
+	%fieldset(data-role="fieldcontain")
+		= f.label :name 
+		= f.text_field :name 
+	%fieldset(data-role="fieldcontain")
+		%label(for='product_type_category_id') Categoria
+		= collection_select(:product_type,:category_id,@categories,:id,:name)
+		
+	%input(type="submit" value="Enviar")

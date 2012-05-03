@@ -1,0 +1,9 @@
+%h1 Lista de Tipos de Produto
+
+=link_to "Criar Tipo de Produto", new_product_type_path, { :'data-role' => "button", :'data-icon' => "plus", :'data-iconpos' => "right"}
+
+%ul.users(data-role="listview" data-inset="true" )
+	-@product_types.each do |c|
+		%li
+			=link_to c.name, c
+

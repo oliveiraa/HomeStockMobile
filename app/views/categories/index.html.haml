@@ -1,1 +1,9 @@
-%h1 Hello World
+%h1 Lista de categorias
+
+=link_to "Criar categoria", new_category_path, { :'data-role' => "button", :'data-icon' => "plus", :'data-iconpos' => "right"}
+
+%ul.users(data-role="listview" data-inset="true" )
+	-@categories.each do |c|
+		%li
+			=link_to c.name, c
+

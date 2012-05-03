@@ -1,0 +1,12 @@
+#main(data-role="collapsible-set")
+	#set1(data-role="collapsible")
+		%h3 Movimentação de Estoque
+	#set2(data-role="collapsible" data-collapsed="false")
+		%h3 Cadastro de produtos
+		%ul(data-role="listview")
+			%li
+				=link_to "Categorias", categories_path
+			%li
+				=link_to "Tipos de Produto", product_types_path
+
+		

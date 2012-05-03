@@ -1,10 +1,18 @@
-class CategoriesController < ActionController::Base
+class CategoriesController < ApplicationController
 	
 	def index
-		@title = "Hello World"
+		@title = "Categorias"
+
+		@categories = Category.all
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @categories }
+		end
 	end
 
 	def new
+	    @title = "Nova categoria"
 	    @category = Category.new
 
 	    respond_to do |format|
@@ -28,10 +36,13 @@ class CategoriesController < ActionController::Base
   	end
 
   	def show
+  		@title = "Categoria"
+  		
   		@category = Category.find(params[:id])
 
   		respond_to do |format|
   			format.html
+  			format.json { render json: @category }
   		end
   	end
 end
