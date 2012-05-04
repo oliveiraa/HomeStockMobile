@@ -1,1 +1,10 @@
-%h1 Mostrar Tipo de Produto!
+%h1 Tipo de Produto
+
+%div(data-role="fieldcontain")
+	%label{for: 'txtName'} Nome:
+	%input{id: 'txtName', type: 'text', readonly: 'readonly', value: @product_type.name}
+%div(data-role="fieldcontain")
+	%label{for: 'txtCategory'} Categoria:
+	%input{id: 'txtCategory', readonly: 'readonly', value: @product_type.category.name}
+%a(href=product_types_path data-role='button' data-ajax='false')
+	Voltar para lista

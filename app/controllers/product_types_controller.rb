@@ -20,4 +20,10 @@ class ProductTypesController < ApplicationController
 		end
 	end
 
+	def show
+		@title = "Tipo de Produto"
+
+		@product_type = ProductType.find(params[:id])
+	end
+
 end
