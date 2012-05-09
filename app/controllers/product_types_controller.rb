@@ -16,6 +16,8 @@ class ProductTypesController < ApplicationController
 		if @product_type.save
 			redirect_to @product_type, notice: "Tipo de Produto Criado com Sucesso"
 		else
+			@product_type = ProductType.new
+			@categories = Category.all
 			render action: "new"
 		end
 	end

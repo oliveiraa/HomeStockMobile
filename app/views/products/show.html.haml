@@ -1,0 +1,17 @@
+%h1 Produto
+= fields_for @product do |f|
+	%fieldset(data-role="fieldcontain")
+		= f.label :name 
+		= f.text_field :name 
+	%fieldset(data-role="fieldcontain")
+		= fields_for @product.product_type do |p|
+			%label(for="txtTipoProduto") Tipo de Produto
+			= p.text_field :name, id: "txtTipoProduto"
+	%fieldset(data-role="fieldcontain")
+		= f.label :description
+		= f.text_area :description		
+	%fieldset(data-role="fieldcontain")
+		= f.label :barcode
+		= f.text_field :barcode
+%a(href=products_path data-role='button' data-ajax='false')
+	Voltar para lista

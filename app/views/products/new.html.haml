@@ -1,0 +1,15 @@
+%h2 Produto
+= form_for(@product) do |f| 
+	%fieldset(data-role="fieldcontain")
+		= f.label :name 
+		= f.text_field :name 
+	%fieldset(data-role="fieldcontain")
+		%label(for='product_product_type_id') Tipo de Produto
+		= collection_select(:product,:product_type_id,@producttypes,:id,:name)
+	%fieldset(data-role="fieldcontain")
+		= f.label :description
+		= f.text_area :description		
+	%fieldset(data-role="fieldcontain")
+		= f.label :barcode
+		= f.text_field :barcode
+	%input(type="submit" value="Enviar")

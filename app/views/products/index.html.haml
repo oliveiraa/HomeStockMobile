@@ -1,0 +1,8 @@
+%h1 Lista de Produtos
+
+=link_to "Criar Produto", new_product_path, { :'data-role' => "button", :'data-icon' => "plus", :'data-iconpos' => "right"}
+
+%ul.users(data-role="listview" data-inset="true" )
+	-@products.each do |c|
+		%li
+			=link_to c.name, c
