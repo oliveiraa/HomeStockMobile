@@ -19,12 +19,10 @@ class ProductsController < ApplicationController
 		else
 			render action: "new"
 		end
-
 	end
 
 	def show
 		@title = "Produto"
 		@product = Product.find(params[:id])
 	end
-
 end
