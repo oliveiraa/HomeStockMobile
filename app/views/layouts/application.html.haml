@@ -10,5 +10,6 @@
 		#main(data-role="page")
 			#header(data-role="header")
 				%h1= @title
+				%a(href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" title="home")
 			#body(data-role="content")
 				= yield 

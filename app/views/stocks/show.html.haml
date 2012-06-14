@@ -1,0 +1,10 @@
+%h1 Estoque
+= fields_for @stock do |f|
+	%fieldset(data-role="fieldcontain")
+		= f.label :name 
+		= f.text_field :name 
+	%fieldset(data-role="fieldcontain")
+		= f.label :description
+		= f.text_area :description		
+%a(href=stocks_path data-role='button' data-ajax='false')
+	Voltar para lista

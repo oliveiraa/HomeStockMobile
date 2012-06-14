@@ -1,0 +1,8 @@
+%h1 Lista de Estoques
+
+=link_to "Criar Estoque", new_stock_path, { :'data-role' => "button", :'data-icon' => "plus", :'data-iconpos' => "right"}
+
+%ul.stocks(data-role="listview" data-inset="true" )
+	-@stocks.each do |c|
+		%li
+			=link_to c.name, c

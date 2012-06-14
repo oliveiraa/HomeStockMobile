@@ -1,6 +1,9 @@
 #main(data-role="collapsible-set")
 	#set1(data-role="collapsible")
 		%h3 Movimentação de Estoque
+		%ul(data-role="listview")
+			%li
+				=link_to "Movimentação de Estoque", stock_movements_path
 	#set2(data-role="collapsible" data-collapsed="false")
 		%h3 Cadastro de produtos
 		%ul(data-role="listview")

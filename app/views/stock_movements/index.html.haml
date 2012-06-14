@@ -1,0 +1,21 @@
+%h1 Movimentacao de Estoque
+
+= form_for @stockmovement do |f|
+	%fieldset(data-role="fieldcontain")
+		%label(for='stock_movement_stock_id') Estoque
+		= collection_select(:stock_movement,:stock_id,@stocks,:id,:name)
+	%fieldset(data-role="fieldcontain")
+		%label(for='stock_movement_product_id') Produtos
+		= collection_select(:stock_movement,:product_id,@products,:id,:name)
+	%fieldset(data-role="fieldcontain")
+		= f.label :quantity
+		= f.text_field :quantity		
+	%input(type="submit" value="Enviar")
+
+
+:javascript
+	$(document).live('pageinit',function(){
+		$('#stock_stock_id').live('change',function(event){
+
+		});
+	});
