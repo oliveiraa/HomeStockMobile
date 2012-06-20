@@ -18,6 +18,15 @@ class StocksController < ApplicationController
 	def show
 		@title = "Stock"
 		@stock = Stock.find(params[:id])
+		@sm = StockMovement.where({ stock_id: @stock.id} )
+		@stocksvm = Array.new
+		@sm.each do |stock|
+			vm = { produto: "", quantidade: "" }
+			vm["quantidade"] = stock.quantity
+			vm["produto"] = Product.find(stock.product_id).name
+			@stocksvm.push(vm)
+		end
+
 	end
 
 	def index

@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(:version => 20120308040114) do
     t.string   "name"
     t.string   "description"
     t.integer  "product_type_id"
+    t.integer  "stock_movement_id"
     t.string   "barcode"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "stock_movements", :force => true do |t|

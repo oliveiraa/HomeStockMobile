@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 	belongs_to :product_type
-	belongs_to :stock
+	belongs_to :stock_movement
 	attr_accessible :name, :product_type, :barcode, :product_type_id, :description
 
 	validates :name, 	:presence => true

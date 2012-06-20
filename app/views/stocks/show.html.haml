@@ -6,5 +6,19 @@
 	%fieldset(data-role="fieldcontain")
 		= f.label :description
 		= f.text_area :description		
+
+-if not @stocksvm.empty?
+	%table 
+		%thead
+			%tr
+				%th Nome do Produto
+				%th Quantidade Disponível
+		%tbody
+		-@stocksvm.each do |s|
+			%tr
+				%td= s["produto"]
+				%td= s["quantidade"]
+
 %a(href=stocks_path data-role='button' data-ajax='false')
 	Voltar para lista
+				

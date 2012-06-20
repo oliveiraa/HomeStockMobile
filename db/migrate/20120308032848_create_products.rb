@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.integer :product_type_id
+      t.integer :stock_movement_id
       t.string :barcode
 
       t.timestamps

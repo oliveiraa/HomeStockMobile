@@ -4,5 +4,6 @@ HomeStockMobile::Application.routes.draw do
   resources :products
   resources :stocks
   resources :stock_movements
+  resources :stock_checkers
   root :to => "pages#index"
 end
